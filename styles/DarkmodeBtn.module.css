@@ -1,0 +1,11 @@
+.btn{
+    border:none;
+    background-color: transparent;
+    font-size:30px;
+    cursor: pointer;
+    color:var(--Black);
+}
+
+.btn.active{
+    color:white;
+}

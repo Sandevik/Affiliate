@@ -1,0 +1,15 @@
+.menu{
+    position: fixed;
+    transform: translateX(100vw);
+    opacity: 0;
+    height:calc(100vh - var(--HeaderHeight));
+    width: 100vw;
+    background-color: var(--LightGray);
+
+    transition: transform .4s ease-in-out, opacity .2s ease-in-out;
+}
+
+.menu.open{
+    transform: translateX(0em);
+    opacity: 1;
+}
