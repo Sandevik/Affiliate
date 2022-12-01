@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-interface animationOptions{
-    boxHeight?: number;
-}
+import type {BoxHeight} from "../components/Animation"
 
-export const useAnimation = (boxHeight: animationOptions) => {
+
+
+export const useAnimation = (boxHeight: BoxHeight) => {
     const [isInViewPort, setIsInViewPort] = useState<boolean>(false);
   const [randId, setRandId] = useState<number>(0);
 

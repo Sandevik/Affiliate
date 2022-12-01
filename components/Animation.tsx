@@ -4,10 +4,12 @@ import style from "../styles/AnimationComponent.module.css";
 
 type AnimationType = "slideFromLeft" | "slideFromRight" | "fadeIn";
 
+export type BoxHeight = number | undefined;
+
 interface AnimationProps {
   children: React.ReactNode;
   animationType: AnimationType;
-  boxHeight?: number;
+  boxHeight?: BoxHeight;
 }
 
 export default function Animation({ children, animationType, boxHeight }: AnimationProps) {
