@@ -1,0 +1,13 @@
+.container{
+    height: 40vw;
+    background-image: url("/whiteball.jpg");
+    background-position-y: 0px;
+    background-size: cover;
+    color: var(--Black);
+
+}
+
+.h1{
+    margin:0;
+    padding:0;
+}
