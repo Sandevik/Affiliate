@@ -2,25 +2,33 @@
     display: flex;
     justify-content: center;
     height: var(--HeaderHeight);
-    background-color:var(--Green);
+    background-color:whitesmoke;
     box-shadow: 0px 2px 5px var(--Gray);
+    color: var(--Green);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.darkMode{
+    background-color: var(--LightBlack);
+    color:var(--LightGray);
 }
 
 .header{
     display: flex;
-    width:1440px;
+    width:2560px;
     justify-content: space-between;
     align-items: center;
     padding-inline:1em;
+    color:inherit;
 }
 
 .header a{
-    color: white;
+    color: inherit;
     transition: color .15s ease-in-out;
 }
 
 .header a:hover{
-    color: var(--LightGray)
+    color: var(--Liver)
 }
 
 .logo{
@@ -29,6 +37,21 @@
 
 
 @media screen and (min-width: 769px) {
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        height: var(--HeaderHeight);
+        background-color:whitesmoke;
+        box-shadow: 0px 2px 5px var(--Gray);
+        color: var(--Green);
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    }
+    
+    .darkMode{
+        background-color: var(--LightBlack);
+        color:var(--LightGray);
+    }
+   
     .menuBtn{
         display: none;
     }
@@ -46,11 +69,27 @@
 }
 
 @media screen and (max-width: 768px){
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        height: var(--HeaderHeight);
+        background-color:whitesmoke;
+        box-shadow: 0px 2px 5px var(--Gray);
+        color: var(--Green);
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    }
+    
+    .darkMode{
+        background-color: var(--LightBlack);
+        color:var(--LightGray);
+    }
+   
+   
     .menuBtn{
         display: flex;
         border:none;
         background-color: transparent;
-        color:white;
+        color: inherit;
         font-size: 30px;
         align-items: center;
         justify-content: center;
@@ -69,7 +108,7 @@
 
 @media screen and (max-width: 768PX){
     .header a{
-        color: white;
+        color: inherit;
         transition: color .15s ease-in-out;
         font-size: 25px;
     }

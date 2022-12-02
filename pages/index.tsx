@@ -25,22 +25,38 @@ export default function Home() {
 
       <Hero />
 
-      <DarkModeBtn />
-
-      <Animation animationType={"slideFromLeft"} boxHeight={500}>
-        <div className={style.slideIn}>Hej</div>
+      <Animation animationType={"slideFromLeft"} boxHeight={300} duration={1.5}>
+        <section className={style.section}>
+          <h2 className={style.h2}>Vad är ett omstartslån?</h2>
+          <p className={style.p}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam esse velit ducimus autem id repellat, neque, eaque vitae inventore fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
+          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae, autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi at. Architecto facere maxime reprehenderit nesciunt repudiandae laudantium eligendi quam?
+          Maiores fugit laudantium quam odio, minima quasi asperiores ratione at atque itaque dolorem vitae distinctio repellendus voluptatem quidem ipsam sint dolores non labore fuga placeat, mollitia explicabo assumenda! At, obcaecati!
+          Fugit cum, incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus nisi quidem, expedita modi hic porro consequatur facilis ratione animi exercitationem architecto at sint sequi delectus. Unde, aliquam laboriosam.
+          </p>
+        </section>
       </Animation>
 
-      <div className={style.test}>a</div>
-
-      <Animation animationType={"slideFromRight"} boxHeight={300}>
-        <div className={style.slideIn}>Hej</div>
+      <Animation animationType={"slideFromRight"} boxHeight={300} duration={1.5} delay={200}>
+      <section className={style.section}>
+          <h2 className={style.h2}>Var kan man få ett omstartslån?</h2>
+          <p className={style.p}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam esse velit ducimus autem id repellat, neque, eaque vitae inventore fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
+          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae, autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi at. Architecto facere maxime reprehenderit nesciunt repudiandae laudantium eligendi quam?
+          Maiores fugit laudantium quam odio, minima quasi asperiores ratione at atque itaque dolorem vitae distinctio repellendus voluptatem quidem ipsam sint dolores non labore fuga placeat, mollitia explicabo assumenda! At, obcaecati!
+          Fugit cum, incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus nisi quidem, expedita modi hic porro consequatur facilis ratione animi exercitationem architecto at sint sequi delectus. Unde, aliquam laboriosam.
+          </p>
+        </section>
       </Animation>
 
-      <div className={style.test}>a</div>
-
-
-
+      <Animation animationType={"fadeIn"} boxHeight={200} duration={2} delay={1000}>
+        <section className={style.twoCards}>
+          <div className={style.card}>
+            <h3>Tips om omstartslån</h3>
+          </div>
+          <div className={style.card}>
+            <h3>Mer om omstartslån</h3>
+          </div>
+        </section>
+      </Animation>
 
 
     </div>

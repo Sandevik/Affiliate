@@ -10,11 +10,31 @@
     color: whitesmoke;
 }
 
-.slideIn{
-    background-color: var(--Liver);
-    height: 100%;
+.section{
+    margin-top: 2em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.h2{
+    
+}
+.p{
+    max-width:1040px;
+}  
+
+.twoCards{
+    margin-top:5em;
+    display: flex;
+    justify-content: center;
+    gap: 7em;
 }
 
-.test{
-    height: 55em;
+.card{
+    background-color: var(--Liver);
+    color: white;
+    padding:1em;
+    border-radius: 1em;
 }

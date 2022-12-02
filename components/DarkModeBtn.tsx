@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import {MdDarkMode, MdOutlineDarkMode} from "react-icons/md"
 import { useTheme } from '../context/ThemeContext';
-import style from "../styles/DarkmodeBtn.module.css";
+import style from "../styles/smallComponents/DarkmodeBtn.module.css";
 
 
 

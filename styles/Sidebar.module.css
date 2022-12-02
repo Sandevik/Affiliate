@@ -5,7 +5,7 @@
     height:calc(100vh - var(--HeaderHeight));
     width: 100vw;
     background-color: var(--LightGray);
-
+    z-index: 10;
     transition: transform .4s ease-in-out, opacity .2s ease-in-out;
 }
 
