@@ -11,7 +11,10 @@ export default function App({ Component, pageProps }: AppProps) {
   const toggleMenu = () => {
     setMenuStatus(!menuStatus);
   };
-  
+  const setMenuFalse = () => {
+    setMenuStatus(false);
+  }
+
 
   const headerLinks = [
     { title: "Omstartslånet", href: "/" },
@@ -21,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeContextProvider>
-      <Header links={headerLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} />
+      <Header links={headerLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
       <Sidebar menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Component {...pageProps}/>
     </ThemeContextProvider>

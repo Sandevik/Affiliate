@@ -47,7 +47,7 @@ export default function Home() {
         </section>
       </Animation>
 
-      <Animation animationType={"fadeIn"} boxHeight={200} duration={2} delay={1000}>
+      <Animation animationType={"fadeIn"} duration={2} delay={600}>
         <section className={style.twoCards}>
           <div className={style.card}>
             <h3>Tips om omstartslån</h3>
