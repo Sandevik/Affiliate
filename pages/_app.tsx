@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { ThemeContextProvider } from "../context/ThemeContext";
+import Footer from "../components/Footer";
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header links={headerLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
       <Sidebar menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Component {...pageProps}/>
+      <Footer />
     </ThemeContextProvider>
   );
 }
