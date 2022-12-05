@@ -3,7 +3,7 @@
     background-color:white;
     color: var(--Black);
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
-    height: 200vh;
+    min-height: 100vh;
 }
 .container.darkmode{
     background-color: var(--Black);
