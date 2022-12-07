@@ -1,0 +1,22 @@
+.container{
+    background-color:white;
+    color: var(--Black);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    margin-block: 2em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.container.darkMode{
+    background-color: var(--Black);
+    color: whitesmoke;
+}
+
+.container p {
+    padding:0;
+    margin:0;
+    max-width:1240px;
+    padding-inline:1.5em;
+}

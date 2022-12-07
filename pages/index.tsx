@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import Animation from "../components/Animation";
-import DarkModeBtn from "../components/DarkModeBtn";
+import Animation from "../components/Blocks/Animation";
 import Hero from "../components/Hero";
-
+import PictureAndTextBlock from "../components/Blocks/PictureAndTextBlock";
 import { useTheme } from "../context/ThemeContext";
 import style from "../styles/Page.module.css";
+import StandardContentBlock from "../components/Blocks/StandardContentBlock";
 
 export default function Home() {
   const { darkMode } = useTheme();
-  
 
   return (
     <div
@@ -25,29 +24,46 @@ export default function Home() {
 
       <Hero />
 
-      <Animation animationType={"slideFromLeft"} boxHeight={300} duration={1.5}>
-        <section className={style.section}>
-          <h2 className={style.h2}>Vad är ett omstartslån?</h2>
-          <p className={style.p}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam esse velit ducimus autem id repellat, neque, eaque vitae inventore fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
-          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae, autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi at. Architecto facere maxime reprehenderit nesciunt repudiandae laudantium eligendi quam?
-          Maiores fugit laudantium quam odio, minima quasi asperiores ratione at atque itaque dolorem vitae distinctio repellendus voluptatem quidem ipsam sint dolores non labore fuga placeat, mollitia explicabo assumenda! At, obcaecati!
-          Fugit cum, incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus nisi quidem, expedita modi hic porro consequatur facilis ratione animi exercitationem architecto at sint sequi delectus. Unde, aliquam laboriosam.
-          </p>
-        </section>
+      <StandardContentBlock headingElement={"h2"} headingText={"Vad är ett omstartslån?"} 
+        contentText={`
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam
+          esse velit ducimus autem id repellat, neque, eaque vitae inventore
+          fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
+          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae,
+          autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi
+          at. Architecto facere maxime reprehenderit nesciunt repudiandae
+          laudantium eligendi quam? Maiores fugit laudantium quam odio, minima
+          quasi asperiores ratione at atque itaque dolorem vitae distinctio
+          repellendus voluptatem quidem ipsam sint dolores non labore fuga
+          placeat, mollitia explicabo assumenda! At, obcaecati! Fugit cum,
+          incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus
+          nisi quidem, expedita modi hic porro consequatur facilis ratione animi
+          exercitationem architecto at sint sequi delectus. Unde, aliquam
+          laboriosam.
+          `}
+      />
+
+      <Animation animationType={"slideFromRight"} boxHeight={300} duration={1}>
+        <StandardContentBlock headingElement="h2" headingText="Var kan man få ett omstartslån?" 
+            contentText="
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam
+            esse velit ducimus autem id repellat, neque, eaque vitae inventore
+            fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
+            Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae,
+            autem quam fugit, quidem nam quod tenetur sequi quos quas atque
+            animi at. Architecto facere maxime reprehenderit nesciunt
+            repudiandae laudantium eligendi quam? Maiores fugit laudantium quam
+            odio, minima quasi asperiores ratione at atque itaque dolorem vitae
+            distinctio repellendus voluptatem quidem ipsam sint dolores non
+            labore fuga placeat, mollitia explicabo assumenda! At, obcaecati!
+            Fugit cum, incidunt voluptas eius aliquam unde, asperiores soluta ex
+            repellendus nisi quidem, expedita modi hic porro consequatur facilis
+            ratione animi exercitationem architecto at sint sequi delectus.
+            Unde, aliquam laboriosam."
+        />
       </Animation>
 
-      <Animation animationType={"slideFromRight"} boxHeight={300} duration={1.5} delay={200}>
-      <section className={style.section}>
-          <h2 className={style.h2}>Var kan man få ett omstartslån?</h2>
-          <p className={style.p}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam esse velit ducimus autem id repellat, neque, eaque vitae inventore fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
-          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae, autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi at. Architecto facere maxime reprehenderit nesciunt repudiandae laudantium eligendi quam?
-          Maiores fugit laudantium quam odio, minima quasi asperiores ratione at atque itaque dolorem vitae distinctio repellendus voluptatem quidem ipsam sint dolores non labore fuga placeat, mollitia explicabo assumenda! At, obcaecati!
-          Fugit cum, incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus nisi quidem, expedita modi hic porro consequatur facilis ratione animi exercitationem architecto at sint sequi delectus. Unde, aliquam laboriosam.
-          </p>
-        </section>
-      </Animation>
-
-      <Animation animationType={"fadeIn"} duration={2} delay={600}>
+      <Animation animationType={"fadeIn"} duration={2} delay={300} boxHeight={100}>
         <section className={style.twoCards}>
           <div className={style.card}>
             <h3>Tips om omstartslån</h3>
@@ -58,6 +74,39 @@ export default function Home() {
         </section>
       </Animation>
 
+      <section className={style.fiftyfifty}>
+        <Animation animationType={"slideFromLeft"}>
+          <div>
+            <h3>Omstartslån utan säkerhet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              similique autem dolor obcaecati excepturi placeat totam fugiat!
+              Consequatur, non laboriosam magnam, ducimus repellat natus
+              officiis eos totam vitae libero ad. Accusantium eum at suscipit
+              dolor, neque labore nesciunt amet sunt, sequi obcaecati dolores
+              architecto quis vitae illo modi. Repellat pariatur non sint!
+            </p>
+          </div>
+        </Animation>
+        <Animation animationType={"slideFromRight"}>
+          <div>
+            <h3>Omstartslån utan medsökande</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              ratione alias, esse, et quae magni consequatur delectus tempore
+              expedita iusto neque temporibus optio debitis at repellat
+              cupiditate libero rem accusamus? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Accusantium eum at suscipit dolor,
+              neque labore nesciunt amet sunt, sequi obcaecati dolores
+              architecto quis vitae illo modi. Repellat pariatur non sint!
+            </p>
+          </div>
+        </Animation>
+      </section>
+
+      <PictureAndTextBlock height={300} pictureNode={2} flipImage={true} imgUrl={"https://images.unsplash.com/photo-1670396118274-4f14fdd6323d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"}>
+        <div>Hej</div>
+      </PictureAndTextBlock>
 
     </div>
   );

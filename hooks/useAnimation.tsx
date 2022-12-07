@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { BoxHeight } from "../components/Animation";
+import type { BoxHeight } from "../components/Blocks/Animation";
 
 interface AnimationProps{
     boxHeight?: BoxHeight;

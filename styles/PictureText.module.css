@@ -1,0 +1,19 @@
+@media screen and (min-width: 769px) {
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr 1fr;  
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr;  
+    }
+}
+
+.img{
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
