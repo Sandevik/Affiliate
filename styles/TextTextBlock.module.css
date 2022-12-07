@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+.wrapper div{
+    padding: 1em;
+}

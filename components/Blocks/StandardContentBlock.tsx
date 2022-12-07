@@ -8,7 +8,7 @@ interface Props{
 }
 
 export default function StandardContentBlock({headingText, headingElement, contentText}:Props) {
-    const[element, setElement] = useState<React.ReactElement | undefined>();
+    const[element, setElement] = useState<JSX.Element | string>("");
     const{darkMode} = useTheme();
 
     useEffect(() => {
@@ -32,12 +32,11 @@ export default function StandardContentBlock({headingText, headingElement, conte
                 setElement(<h6>{headingText}</h6>)
                 break;
             default:
+                setElement("");
                 break;
         }
     }, [])
     
-    
-
   return (
     <section className={darkMode ? `${style.container} ${style.darkMode}` : style.container}>
        {element}

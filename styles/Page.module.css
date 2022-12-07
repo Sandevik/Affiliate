@@ -40,21 +40,3 @@
     border-radius: 1em;
 }
 
-@media screen and (min-width: 768px){
-    .fiftyfifty{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (min-width: 769px){
-    .fiftyfifty{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-}
-
-.fiftyfifty div{
-    padding: 1em;
-}
