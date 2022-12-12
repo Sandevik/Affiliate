@@ -10,9 +10,10 @@ interface props {
   menuStatus: boolean;
   toggleMenu: () => void;
   dropDownLinks: link[];
+  bankLinks: link[];
 }
 
-export default function Sidebar({menuStatus, toggleMenu, dropDownLinks}: props): JSX.Element {
+export default function Sidebar({menuStatus, toggleMenu, dropDownLinks, bankLinks}: props): JSX.Element {
   const { darkMode } = useTheme();
   const [subMenu, setSubMenu] = useState<boolean>(false);
   const toggleSubMenu = () => {
@@ -27,6 +28,17 @@ export default function Sidebar({menuStatus, toggleMenu, dropDownLinks}: props):
               <div>Omstartslån <BsChevronDown className={style.chevron} /></div>
               <ul className={subMenu ? `${style.dropDownLinks} ${style.active}` : style.dropDownLinks}>
                 {dropDownLinks?.map((link) => (
+                  <li key={link.title+"2"} className={style.innerLink} onClick={toggleMenu}>
+                    <Link href={link.href}>{link.title}</Link>
+                    <BsChevronDown className={style.chevronInner} />
+                  </li>
+                ))}
+              </ul>
+          </li>
+          <li className={`${style.li} ${style.dropDown}`} onClick={toggleSubMenu}>
+              <div>Långivare <BsChevronDown className={style.chevron} /></div>
+              <ul className={subMenu ? `${style.dropDownLinks} ${style.active}` : style.dropDownLinks}>
+                {bankLinks?.map((link) => (
                   <li key={link.title+"2"} className={style.innerLink} onClick={toggleMenu}>
                     <Link href={link.href}>{link.title}</Link>
                     <BsChevronDown className={style.chevronInner} />
