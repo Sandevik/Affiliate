@@ -4,7 +4,7 @@ import SubHero from '../../components/SubHero'
 import { useTheme } from '../../context/ThemeContext'
 import style from "../../styles/Page.module.css"
 
-export default function index() {
+export default function Index() {
   const {darkMode} = useTheme()
   return (
     <div className={darkMode ? `${style.container} ${style.darkmode}` : style.container}>
