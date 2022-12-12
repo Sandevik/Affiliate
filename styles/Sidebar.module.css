@@ -45,3 +45,68 @@
     background-color: var(--Black);
     color:var(--LightGray);
 }
+
+.dropDownLink{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.chevron{
+    transform: rotate(-90deg) translateX(-5px);
+    transition: transform .2s ease-in-out;
+}
+
+.innerLink{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.chevronInner{
+    transform: rotate(90deg) translateX(5px);
+    transition: transform .2s ease-in-out;
+}
+
+.innerLink:hover .chevronInner{
+    transform: rotate(90deg) translateY(8px) translateX(5px) ;
+}
+
+.dropDownLink:hover .chevron{
+    transform: translate(10px, 5px);
+}
+
+
+.dropDownLink:hover .dropDown{
+    position: absolute;
+    background-color: var(--Green);
+    z-index: 10;
+    color: whitesmoke;
+    list-style-type: none;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-60px, 30px);
+    opacity:1;
+}
+
+.dropDown li{
+    margin-bottom: 10px;
+    
+}
+
+.dropDown li:hover a{
+    color: var(--LightGray)
+}
+
+.dropDown div{
+    margin-bottom: 1em;;
+}
+
+.dropDownLinks{
+    display: none;
+}
+
+.dropDownLinks.active{
+    display: initial;
+}

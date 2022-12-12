@@ -15,18 +15,26 @@ export default function App({ Component, pageProps }: AppProps) {
   const setMenuFalse = () => {
     setMenuStatus(false);
   }
-
-
+  
   const headerLinks = [
     { title: "Omstartslånet", href: "/" },
-    { title: "Omstartslån", href: "/omstartslan" },
+    { title: "Guider", href: "/guider"},
     { title: "Kontakt", href: "/kontakt" },
   ];
 
+  const dropDownLinks = [
+    { title: "Kronofogden", href: "/kronofogden"},
+    { title: "Utan säkerhet", href: "/utan-sakerhet"},
+    { title: "Utan medsökande", href: "/utan-medsokande"},
+    { title: "Med många förfrågningar", href: "/med-manga-forfragningar"},
+    { title: "Med dålig kreditvärdighet", href: "/med-dalig-kreditvardighet"},
+    { title: "Med skuldsaldo", href: "/med-skuldsaldo"},
+  ]
+
   return (
     <ThemeContextProvider>
-      <Header links={headerLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
-      <Sidebar menuStatus={menuStatus} toggleMenu={toggleMenu} />
+      <Header links={headerLinks} dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
+      <Sidebar dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Component {...pageProps}/>
       <Footer />
     </ThemeContextProvider>

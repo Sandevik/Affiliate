@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function index() {
   return (
-    <div>Om</div>
+    <div>
+        <h1>Guider</h1>
+    </div>
   )
 }

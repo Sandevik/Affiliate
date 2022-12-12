@@ -20,16 +20,76 @@
 }
 
 .header a:hover{
-    color: var(--Liver)
+    color: var(--Blue);
 }
 
 .logo{
     font-size:32px;
 }
 
+.mainLink{
+    z-index: 100;
+}
+
+.dropDownLink{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.chevron{
+    transform: rotate(-90deg) translateX(-5px);
+    transition: transform .2s ease-in-out;
+}
+
+.innerLink{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.chevronInner{
+    transform: rotate(90deg) translateX(5px);
+    transition: transform .2s ease-in-out;
+}
+
+.innerLink:hover .chevronInner{
+    transform: rotate(90deg) translateY(8px) translateX(5px) ;
+}
+
+.dropDownLink:hover .chevron{
+    transform: translate(10px, 5px);
+}
+
+.dropDown{
+    display: none;
+}
+
+.dropDownLink:hover .dropDown{
+    position: absolute;
+    background-color: var(--Green);
+    z-index: 10;
+    color: whitesmoke;
+    list-style-type: none;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-75px, 25px);
+    opacity:1;
+    border-radius: 5px;
+}
+
+.dropDown li{
+    margin-bottom: 5px;
+    
+}
+
+.dropDown li:hover a{
+    color: var(--LightGray)
+}
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 830px) {
     .wrapper{
         display: flex;
         justify-content: center;
@@ -59,6 +119,7 @@
         padding:0;
         padding-left:1em;
         display: flex;
+        align-items: center;
         gap:4em;
         font-size: larger;
         font-weight: 600;
@@ -66,7 +127,7 @@
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 829px){
     .wrapper{
         display: flex;
         justify-content: center;

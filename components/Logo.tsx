@@ -5,6 +5,6 @@ import style from "../styles/smallComponents/Logo.module.css"
 
 export default function Logo() {
   return (
-    <div className={style.logo}><RiRestartLine /><div className={style.text}>mstartslånet</div></div>
+    <div className={style.logo}><RiRestartLine className={style.icon}/><div className={style.text}>mstartslånet</div></div>
   )
 }
