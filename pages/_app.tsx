@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeContextProvider>
       <Header links={headerLinks} bankLinks={bankLinks} dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
-      <Sidebar dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} />
+      <Sidebar bankLinks={bankLinks} dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Component {...pageProps}/>
       <Footer />
     </ThemeContextProvider>
