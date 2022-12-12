@@ -10,33 +10,6 @@
     color: whitesmoke;
 }
 
-
-@media screen and (min-width: 500px){
-    .twoCards{
-        margin-block:2em;
-        padding-inline:1em;
-        display: flex;
-        justify-content: center;
-        gap: 10%;
-    }
+.link{
+    border-bottom: 1px solid black;
 }
-
-@media screen and (max-width: 499px){
-    .twoCards{
-        margin-block:2em;
-        padding-inline:1em;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 1em;
-    }
-}
-
-
-.card{
-    background-color: var(--Liver);
-    color: white;
-    padding:1em;
-    border-radius: 1em;
-}
-

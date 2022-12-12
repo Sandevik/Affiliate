@@ -24,16 +24,24 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const dropDownLinks = [
     { title: "Kronofogden", href: "/kronofogden"},
-    { title: "Utan säkerhet", href: "/utan-sakerhet"},
-    { title: "Utan medsökande", href: "/utan-medsokande"},
-    { title: "Med många förfrågningar", href: "/med-manga-forfragningar"},
-    { title: "Med dålig kreditvärdighet", href: "/med-dalig-kreditvardighet"},
-    { title: "Med skuldsaldo", href: "/med-skuldsaldo"},
+    { title: "Omstartslån utan säkerhet", href: "/utan-sakerhet"},
+    { title: "Omstartslån utan medsökande", href: "/utan-medsokande"},
+    { title: "Omstartslån med många förfrågningar", href: "/med-manga-forfragningar"},
+    { title: "Omstartslån med dålig kreditvärdighet", href: "/med-dalig-kreditvardighet"},
+    { title: "Omstartslån med skuldsaldo", href: "/med-skuldsaldo"},
+    { title: "Omstarslån med anmärkning", href: "/med-anmarkning"} 
+  ]
+
+  const bankLinks = [
+    { title: "Likvidum", href: "/likvidum"},
+    { title: "Marginalen Bank", href: "/marginalen-bank"},
+    { title: "Nstart", href: "/nstart"},
+    { title: "Svea Bank", href: "/svea-bank"}
   ]
 
   return (
     <ThemeContextProvider>
-      <Header links={headerLinks} dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
+      <Header links={headerLinks} bankLinks={bankLinks} dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} setMenuFalse={setMenuFalse}/>
       <Sidebar dropDownLinks={dropDownLinks} menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Component {...pageProps}/>
       <Footer />

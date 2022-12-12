@@ -9,7 +9,7 @@ export default function index() {
   return (
     <div className={darkMode ? `${style.container} ${style.darkmode}` : style.container}>
       <SubHero>
-        <h1>Omstartslån med skuldsaldo</h1>
+        <h1>Marginalen Bank</h1>
         <p>Här är allt du behöver veta </p>
       </SubHero>
 

@@ -2,14 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import Animation from "./Animation";
 import style from "../../styles/TextTextBlock.module.css";
+import Link from "next/link";
 
 interface Props {
   firstHeading: string;
   firstHeadingElement: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   firstContentText: string;
+  firstLink?: string;
+  firstLinkText?: string;
+
   secondHeading: string;
   secondHeadingElement: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   secondContentText: string;
+  secondLink?: string;
+  secondLinkText?: string;
   animate: boolean;
 }
 
@@ -72,22 +78,23 @@ export default function TextTextBlock(props: Props) {
         <div className={style.wrapper}>
           <Animation animationType="slideFromLeft">
           {firstElement}
-            <p>{props.firstContentText}</p>
+            <p>{props.firstContentText} <br /><br />{props.firstLink ? <Link className={style.link} href={props.firstLink}>{props.firstLinkText}</Link> : ""}</p>
+
           </Animation>
           <Animation animationType="slideFromRight">
           {secondElement}
-            <p>{props.secondContentText}</p>
+            <p>{props.secondContentText} <br /><br /> {props.secondLink ? <Link className={style.link} href={props.secondLink}>{props.secondLinkText}</Link> : ""}</p>
           </Animation>
         </div>
       ) : (
         <div className={style.wrapper}>
           <div>
           {firstElement}
-            <p>{props.firstContentText}</p>
+            <p>{props.firstContentText} {props.firstLink ? <Link className={style.link} href={props.firstLink}>{props.firstLinkText}</Link> : ""}</p>
           </div>
           <div>
           {secondElement}
-            <p>{props.secondContentText}</p>
+            <p>{props.secondContentText} {props.secondLink ? <Link className={style.link} href={props.secondLink}>{props.secondLinkText}</Link> : ""}</p>
             </div>
         </div>
       )}

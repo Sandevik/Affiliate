@@ -1,0 +1,15 @@
+.container {
+  height: 20em;
+  background-color: whitesmoke;
+  color: var(--Black);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkMode {
+  background-color: var(--LightBlack);
+  color: var(--LightGray);
+}

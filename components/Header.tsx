@@ -17,11 +17,12 @@ interface props {
   menuStatus: boolean;
   links: link[];
   dropDownLinks: link[];
+  bankLinks: link[];
   toggleMenu: () => void;
   setMenuFalse: () => void;
 }
 
-export default function Header({ menuStatus, toggleMenu, links, setMenuFalse, dropDownLinks }: props): JSX.Element {
+export default function Header({ menuStatus, toggleMenu, links, setMenuFalse, dropDownLinks, bankLinks }: props): JSX.Element {
   const {darkMode} = useTheme()
   return (
     <div className={menuStatus && darkMode ?  `${style.wrapper} ${style.sticky} ${style.darkMode}` :menuStatus && !darkMode ? `${style.wrapper} ${style.sticky}` : !menuStatus && darkMode ?  `${style.wrapper} ${style.darkMode}` : style.wrapper}>
@@ -32,6 +33,12 @@ export default function Header({ menuStatus, toggleMenu, links, setMenuFalse, dr
             Omstartslån <BsChevronDown className={style.chevron}/>
             <ul className={style.dropDown}>
               {dropDownLinks.map(link => <li key={link.title+"1"} className={style.innerLink}><Link href={link.href}>{link.title}</Link> <BsChevronDown className={style.chevronInner}/></li>)}
+            </ul>
+          </li>
+          <li className={style.dropDownLink}>
+            Lånegivare <BsChevronDown className={style.chevron}/>
+            <ul className={style.dropDown}>
+              {bankLinks.map(link => <li key={link.title+"1"} className={style.innerLink}><Link href={link.href}>{link.title}</Link> <BsChevronDown className={style.chevronInner}/></li>)}
             </ul>
           </li>
           {links.map((link, index) => {

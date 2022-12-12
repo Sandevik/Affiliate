@@ -4,10 +4,10 @@ import style from "../../styles/StandardContentBlock.module.css"
 interface Props{
     headingText?: string;
     headingElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-    contentText: string;
+    children: React.ReactNode;
 }
 
-export default function StandardContentBlock({headingText, headingElement, contentText}:Props) {
+export default function StandardContentBlock({headingText, headingElement, children}:Props) {
     const[element, setElement] = useState<JSX.Element | string>("");
     const{darkMode} = useTheme();
 
@@ -40,7 +40,7 @@ export default function StandardContentBlock({headingText, headingElement, conte
   return (
     <section className={darkMode ? `${style.container} ${style.darkMode}` : style.container}>
        {element}
-       <p>{contentText}</p>
+       <p>{children}</p>
     </section>
   )
 }

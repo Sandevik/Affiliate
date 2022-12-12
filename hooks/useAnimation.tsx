@@ -23,7 +23,10 @@ export const useAnimation = ({boxHeight, delay, duration}: AnimationProps) => {
     function generateRandomId (){
         return Math.random()*10000;
     }
-    useEffect(()=>{setRandId(generateRandomId())},[])
+    useEffect(()=>{
+        setRandId(generateRandomId())
+    },[])
+    
     useEffect(()=>{
         const animate = document.querySelector(`[data-animate="${randId}"]`) as HTMLElement | null;
         animate?.parentElement?.style.setProperty("--Height", `${boxHeight ? boxHeight : "200"}px`);
