@@ -2,7 +2,7 @@ import React from 'react'
 import StandardContentBlock from '../../../components/Blocks/StandardContentBlock'
 import SubHero from '../../../components/SubHero'
 import { useTheme } from '../../../context/ThemeContext'
-import style from "../../styles/Page.module.css"
+import style from "../../../styles/Page.module.css"
 
 export default function Index() {
   const {darkMode} = useTheme()
