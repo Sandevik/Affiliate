@@ -13,7 +13,6 @@ export default function index() {
         <p>Här är allt du behöver veta </p>
       </SubHero>
 
-      <StandardContentBlock contentText='test'/>
       
     </div>
   )
