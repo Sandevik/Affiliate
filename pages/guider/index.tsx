@@ -16,6 +16,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
     </Head>
+    
     <div className={darkMode ? `${style.container} ${style.darkmode}` : style.container}>
       <SubHero>
         <h1>Guider</h1>
