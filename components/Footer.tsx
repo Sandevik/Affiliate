@@ -23,7 +23,7 @@ export default function Footer() {
           <ul className={style.ul}>
             <li><Link href="/om-oss">Om oss</Link></li>
             <li><Link href={"/kontakt"}>Kontakta oss</Link></li>
-            <li>Sidkarta</li>
+            <li><Link href="/sitemap">Sidkarta</Link></li>
           </ul>
         </div>
       </div>
