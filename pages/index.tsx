@@ -10,6 +10,19 @@ import TextTextBlock from "../components/Blocks/TextTextBlock";
 import Link from "next/link";
 import FAQ from "../components/Blocks/FAQ";
 
+
+const FAQFrågor = [
+  {question: "Vilka krav finns för att få ett omstartslån?", answer: "a"},
+  {question: "Hur stor summa kan man låna genom ett omstartslån?", answer: "b"},
+  {question: "Hur lång är återbetalningstiden för ett omstartslån?", answer: "c"},
+  {question: "Hur påverkar ett omstartslån ens kreditvärdighet?", answer: "d"},
+  {question: "Finns det några avgifter eller räntor för ett omstartslån?", answer: "e"},
+  {question: "Kan man få stöd med rådgivning om man ansöker om ett omstartslån?", answer: "f"},
+  {question: "Hur snabbt kan man få sitt omstartslån beviljat och utbetalt?", answer: "g"},
+  {question: "Kan man få ett omstartslån om man har betalningsanmärkningar eller andra ekonomiska problem?", answer: "h"},
+];
+
+
 export default function Home() {
   const { darkMode } = useTheme();
 
@@ -30,37 +43,12 @@ export default function Home() {
       <Hero />
 
       <StandardContentBlock headingElement={"h2"} headingText={"Vad är ett omstartslån?"}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam esse
-        velit ducimus autem id repellat, neque, eaque vitae inventore fugiat
-        quod, placeat cumque fugit? Sit iusto commodi possimus sed. Nihil,
-        consectetur aliquid minima aliquam commodi ipsum recusandae, autem quam
-        fugit, quidem nam quod tenetur sequi quos quas atque animi at.
-        Architecto facere maxime reprehenderit nesciunt repudiandae laudantium
-        eligendi quam? Maiores fugit laudantium quam odio, minima quasi
-        asperiores ratione at atque itaque dolorem vitae distinctio repellendus
-        voluptatem quidem ipsam sint dolores non labore fuga placeat, mollitia
-        explicabo assumenda! At, obcaecati! Fugit cum, incidunt voluptas eius
-        aliquam unde, asperiores soluta ex repellendus nisi quidem, expedita
-        modi hic porro consequatur facilis ratione animi exercitationem
-        architecto at sint sequi delectus. Unde, aliquam laboriosam.
+      Ett omstartslån är en typ av lån som syftar till att hjälpa företag att återhämta sig efter en ekonomisk kris eller annan typ av negativ händelse. Det kan till exempel vara en orkan, en pandemi eller en ekonomisk depression som har försatt företaget i en svår situation. Omstartslånet ger företaget tillgång till pengar som kan användas för att täcka kostnader som rör verksamheten, såsom löner, räntor och andra utgifter. Målet med omstartslånet är att hjälpa företaget att återhitta sin förmåga att tjäna pengar och återgå till en hållbar ekonomisk situation.
       </StandardContentBlock>
 
-      <Animation animationType={"slideFromRight"} boxHeight={300} duration={1}>
+      <Animation animationType={"slideFromRight"} duration={1}>
         <StandardContentBlock headingElement="h2" headingText="Var kan man få ett omstartslån?">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam
-          esse velit ducimus autem id repellat, neque, eaque vitae inventore
-          fugiat quod, placeat cumque fugit? Sit iusto commodi possimus sed.
-          Nihil, consectetur aliquid minima aliquam commodi ipsum recusandae,
-          autem quam fugit, quidem nam quod tenetur sequi quos quas atque animi
-          at. Architecto facere maxime reprehenderit nesciunt repudiandae
-          laudantium eligendi quam? Maiores fugit laudantium quam odio, minima
-          quasi asperiores ratione at atque itaque dolorem vitae distinctio
-          repellendus voluptatem quidem ipsam sint dolores non labore fuga
-          placeat, mollitia explicabo assumenda! At, obcaecati! Fugit cum,
-          incidunt voluptas eius aliquam unde, asperiores soluta ex repellendus
-          nisi quidem, expedita modi hic porro consequatur facilis ratione animi
-          exercitationem architecto at sint sequi delectus. Unde, aliquam
-          laboriosam.
+        Det finns olika ställen där man kan få ett omstartslån. En vanlig plats att vända sig till är en bank eller en annan finansiell institution som erbjuder lån till företag. Det kan också vara en organisation som är specialiserad på att hjälpa företag att få tillgång till finansiering, till exempel en affärsinkubator eller en finansiell rådgivare. I vissa fall kan man också få ett omstartslån från staten eller en lokal myndighet, till exempel genom en särskild fond eller program som syftar till att stödja företag i en kris. För att få ett omstartslån är det viktigt att ha en bra affärsplan och visa att företaget har potential att återhämta sig och bli lönsamt igen.
         </StandardContentBlock>
       </Animation>
 
@@ -68,23 +56,12 @@ export default function Home() {
         animate={true}
         firstHeadingElement="h3"
         firstHeading="Omstartslån utan säkerhet"
-        firstContentText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              similique autem dolor obcaecati excepturi placeat totam fugiat!
-              Consequatur, non laboriosam magnam, ducimus repellat natus
-              officiis eos totam vitae libero ad. Accusantium eum at suscipit
-              dolor, neque labore nesciunt amet sunt, sequi obcaecati dolores
-              architecto quis vitae illo modi. Repellat pariatur non sint!"
+        firstContentText="Omstartslån utan säkerhet är en typ av lån som inte kräver att låntagaren ställer någon form av säkerhet för lånet. Det innebär att låntagaren inte behöver lämna ifrån sig något värdefullt till långivaren som säkerhet för lånet, såsom en fastighet eller en bil. Istället baseras bedömningen av lånet på låntagarens kreditvärdighet och företagets ekonomiska situation. Ett omstartslån utan säkerhet kan vara ett bra alternativ för företag som inte har tillgång till någon form av säkerhet att lämna till långivaren. Det kan också vara attraktivt för företag som inte vill riskera att förlora en viktig tillgång i händelse av att lånet inte betalas tillbaka enligt avtalet."
         firstLink="/utan-sakerhet"
         firstLinkText="Läs mer om omstartslån utan säkerhet"
         secondHeadingElement="h3"
         secondHeading="Omstartslån utan medsökande"
-        secondContentText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-              ratione alias, esse, et quae magni consequatur delectus tempore
-              expedita iusto neque temporibus optio debitis at repellat
-              cupiditate libero rem accusamus? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Accusantium eum at suscipit dolor,
-              neque labore nesciunt amet sunt, sequi obcaecati dolores
-              architecto quis vitae illo modi. Repellat pariatur non sint!"
+        secondContentText="Omstartslån utan medsökande är en typ av lån där endast den person som söker lånet är ansvarig för att betala tillbaka lånet. Det innebär att ingen annan person, så kallad medsökande, behöver lägga sitt namn på låneansökan eller på låneavtalet. Detta kan vara attraktivt för företagare som inte har någon närstående eller annan person som är villig att ställa upp som medsökande, eller för dem som helt enkelt vill stå för ansvaret för lånet själva. Det är dock viktigt att notera att långivaren fortfarande kommer att göra en bedömning av låntagarens kreditvärdighet innan lånet beviljas, och att låntagaren fortfarande är ansvarig för att betala tillbaka lånet enligt avtalet."
         secondLink="/utan-medsokande"
         secondLinkText="Läs mer om omstartslån utan medsökande"
       />
@@ -103,19 +80,14 @@ export default function Home() {
           headingElement="h3"
           headingText="Omstartslån med anmärkning"
         >
-          ratione alias, esse, et quae magni consequatur delectus tempore
-          expedita iusto neque temporibus optio debitis at repellat cupiditate
-          libero rem accusamus? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Accusantium eum at suscipit dolor, neque labore
-          nesciunt amet sunt, sequi obcaecati dolores architecto quis vitae illo
-          modi. Repellat pariatur non sint!
+          Omstartslån med anmärkning är en typ av lån som kan beviljas även om låntagaren har en anmärkning i sin kreditupplysning. En anmärkning i kreditupplysningen är en indikation på att låntagaren tidigare har haft svårigheter att betala tillbaka ett lån enligt avtalet, och det kan göra det svårare att få ett lån beviljat hos vissa långivare. Ett omstartslån med anmärkning är dock ett lån som riktar sig specifikt till företag med anmärkningar i sin kreditupplysning, och som har svårt att få ett lån på annat sätt. Långivaren kommer dock fortfarande att göra en bedömning av låntagarens ekonomiska situation innan lånet beviljas, och låntagaren måste fortfarande uppfylla vissa krav för att få lånet.
           <br />
           <br />
           <Link className={style.link} href="/med-anmarkning">Läs mer om omstartslån med anmärkning</Link>
         </StandardContentBlock>
       </PictureAndTextBlock>
 
-      <FAQ questionsAnswers={[{question: "Question", answer: "Answer lorem ipsum dolor sin amet."}, {question: "Question 2", answer: "answer 2 lorem ipsum"}]}/>
+      <FAQ questionsAnswers={FAQFrågor}/>
 
     </div>
   );

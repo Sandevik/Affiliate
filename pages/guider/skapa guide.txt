@@ -1,4 +1,5 @@
 Här kan du lägga till guide sidor om du vill ha.
+För filer i den här mappen kommer url:en se ut så här /guider/"filnamn"
 
 Skapa en fil som heter "filnamn".tsx, Ex: råd-om-omstartslån.tsx.
 
@@ -6,10 +7,27 @@ lägg till detta i den tomma filen:
 
 import Head from 'next/head'
 import React from 'react'
-import StandardContentBlock from '../../components/Blocks/StandardContentBlock'
-import SubHero from '../../components/SubHero'
 import { useTheme } from '../../context/ThemeContext'
+
+//Här har jag importerat alla block som jag har gjort, om du skapar en ny sida måsta blocken importeras såhär. 
+//OBS!! filvägen kan vara annorlunda så du kan behöva ta bort eller lägga till en "../" 
+//                                 v
+//                                 v
+import StandardContentBlock from '../../components/Blocks/StandardContentBlock'
+import Animation from "../components/Blocks/Animation";
+import PictureAndTextBlock from "../components/Blocks/PictureAndTextBlock";
+import TextTextBlock from "../components/Blocks/TextTextBlock";
+import FAQ from "../components/Blocks/FAQ";
+import SubHero from '../../components/SubHero'
+
+// Här importeras styles du kan lägga till flera style-moduler genom att ändra namnet på filen.
+// OBS! Filen måste sluta med .module.css för att det ska fungera
 import style from "../../styles/Page.module.css"
+
+// OBS! Om du vill skapa egna css klasser måste du skriva className istället för class, 
+// då class redan är reserverat i javascript. 
+// Sedan måste det stå {style."klass namn"}, för flera klasser {`${style."klassnamn1"} ${style."klassnamn2"}`} (utan "")(se längre ner),
+// sedan kan du skriva alla klasser i filen /styles/Page.module.css
 
 export default function Index() {
   const {darkMode} = useTheme()
@@ -34,8 +52,3 @@ export default function Index() {
 }
 
 Ändra och lägg till tills det blir som du önskar i både Head taggen och i diven som är under Head taggen.
-
-OBS! Om du vill skapa egna css klasser måste du skriva className istället för class, 
-då class redan är reserverat i javascript. 
-Sedan måste det stå {style."klass namn"},
-sedan kan du skriva alla klasser i filen /styles/Page.module.css
