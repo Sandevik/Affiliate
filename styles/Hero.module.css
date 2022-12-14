@@ -37,6 +37,15 @@
 
 .list {
   margin: 0;
+  list-style: none;
+}
+.list li{
+  text-align: left;
+}
+
+.list li::before{
+  content: '✓';
+  margin-right: 7px;
 }
 
 @media screen and (min-width: 1256px) {
