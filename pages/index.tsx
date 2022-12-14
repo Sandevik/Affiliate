@@ -69,7 +69,7 @@ export default function Home() {
         />
 
         <PictureAndTextBlock
-          height={300}
+          height={350}
           pictureNode={2}
           flipImage={true}
           background={"whitesmoke"}

@@ -16,7 +16,7 @@ export default function Hero() {
             <li>Hjälper dig jämföra</li>
             <li>Kostnadsfritt</li>
           </ul>
-          <button className={style.cta}><a href="https://likvidum.se" target="_blank">Jämför nu</a></button>
+          <button className={style.cta}><a href="https://likvidum.se" target="_blank" rel="nofollow">Jämför nu</a></button>
         </div>
         <RiRestartLine className={darkMode? `${style.darkMode} ${style.icon}`:style.icon}/>
     </div>
