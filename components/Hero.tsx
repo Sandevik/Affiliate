@@ -17,7 +17,7 @@ export default function Hero() {
             <li>lorem ipsum</li>
             <li>lorem ipsum</li>
           </ul>
-          <button className={style.cta}>Jämför nu</button>
+          <button className={style.cta}><a href="https://likvidum.se" target="_blank">Jämför nu</a></button>
         </div>
         <RiRestartLine className={darkMode? `${style.darkMode} ${style.icon}`:style.icon}/>
     </div>
